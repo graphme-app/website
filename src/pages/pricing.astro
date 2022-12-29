@@ -1,0 +1,88 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Faq from '../components/Faq.astro';
+
+const plans = [
+    {
+        "name": "Free",
+        "description": "Relevant for individuals, or to evaluate the product at a small scale.",
+        "price": 0,
+        "features": [
+            "5 users",
+            "1 connection",
+            "50 saved queries",
+            "Fair usage",
+        ],
+    },
+    {
+        "name": "Team",
+        "description": "Best to collaborate with multiple users inside a team.",
+        "price": 50,
+        "features": [
+            "25 users",
+            "1 connection",
+            "Unlimited saved queries",
+            "Unlimited usage",
+        ],
+    },
+    {
+        "name": "Company",
+        "description": "Best for a large scale use inside a larger team or company.",
+        "price": 300,
+        "features": [
+            "150 users",
+            "5 connections",
+            "Unlimited saved queries",
+            "Unlimited usage",
+        ],
+    }
+];
+
+---
+
+<Layout title="GraphMe">
+    <section class="bg-white">
+        <div class="max-w-screen-xl mx-auto py-8 lg:py-16 px-4 lg:px-6">
+            <div class="max-w-screen-md mx-auto mb-8 text-center lg:mb-12">
+                <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900">
+                    Designed for teams of all sizes
+                </h2>
+                <p class="mb-5 font-light text-gray-500 sm:text-xl">
+                    Start with the Free plan to evaluate the product without any time limit, and then jump onto the paid plan that works for your team size.
+                </p>
+            </div>
+            <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
+                {plans.map(plan => (
+                    <div class="flex flex-col max-w-lg p-6 mx-auto text-center text-gray-900 bg-white border border-gray-100 rounded-lg shadow xl:p-8">
+                        <h3 class="mb-4 text-2xl font-semibold">{plan.name}</h3>
+                        <p class="font-light text-gray-500 sm:text-lg">{plan.description}</p>
+                        <div class="flex items-baseline justify-center my-8">
+                            <span class="mr-2 text-5xl font-extrabold">${plan.price}</span>
+                            <span class="text-gray-500">/month</span>
+                        </div>
+                        <ul role="list" class="mb-8 space-y-4 text-left">
+                            {plan.features.map(feature => (
+                                <li class="flex items-center space-x-3">
+                                    <svg class="flex-shrink-0 w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                                    <span>{feature}</span>
+                                </li>
+                            ))}
+                        </ul>
+                        <a href="https://console.graphme.app/signup"
+                           class="text-white bg-orange-600 hover:bg-orange-700 focus:ring-4 focus:ring-orange-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                        >
+                            Get started
+                        </a>
+                    </div>
+                ))}
+            </div>
+        </div>
+      </section>
+
+    <section class="bg-white">
+        <div class="max-w-screen-xl px-4 pb-8 mx-auto lg:pb-24 lg:px-6 ">
+            <Faq />
+        </div>
+    </section>
+    
+</Layout>

@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Mona Sans';
+    src:
+      url('/fonts/Mona-Sans.woff2') format('woff2 supports variations'),
+      url('/fonts/Mona-Sans.woff2') format('woff2-variations');
+    font-weight: 200 900;
+    font-stretch: 75% 125%;
+  }
+
+  @font-face {
+    font-family: 'Hubot Sans';
+    src:
+      url('/fonts/Hubot-Sans.woff2') format('woff2 supports variations'),
+      url('/fonts/Hubot-Sans.woff2') format('woff2-variations');
+    font-weight: 200 900;
+    font-stretch: 75% 125%;
+  }
+}
+
+/* https://github.com/Microflash/remark-callout-directives */
+.callout {
+  @apply px-4 mb-2 flex items-center border-t-4;
+}
+
+.callout-title {
+  @apply hidden;
+}
+
+.callout-content {
+  @apply ml-2;
+}
+
+.callout-assert {
+  @apply text-blue-700 bg-blue-100;
+}
+
+.callout-warn {
+  @apply text-yellow-700 bg-yellow-100 border-yellow-500;
+}
+
+.callout-deter {
+  @apply text-red-700 bg-red-100 border-red-500;
+}
+
+.callout-commend {
+  @apply text-green-700 bg-green-100 border-green-500;
+}
+
+.callout-assert {
+  @apply text-blue-700 bg-blue-100 border-blue-500;
+}
+
+.callout-note {
+  @apply text-gray-700 bg-gray-100 border-gray-500 ;
+}

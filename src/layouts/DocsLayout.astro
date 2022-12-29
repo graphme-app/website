@@ -1,0 +1,18 @@
+---
+import Layout from './Layout.astro'
+import DocsSidebar from '../components/DocsSidebar.astro'
+import DocsToc from '../components/DocsToc.astro'
+
+const { frontmatter, headings } = Astro.props;
+---
+<Layout title={frontmatter.title}>
+    <div class="border-gray-200 shadow-inner border-t">
+        <div class="max-w-screen-xl mx-auto flex">
+            <DocsSidebar/>
+            <article class="prose max-w-none p-6">
+                <slot />
+            </article>
+            <DocsToc headings={headings}/>
+        </div>
+    </div>
+</Layout>

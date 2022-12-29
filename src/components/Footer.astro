@@ -1,0 +1,56 @@
+---
+const year = new Date().getFullYear();
+---
+<footer class="bg-white border-gray-200 border-t">
+    <div class="max-w-screen-xl py-6 mx-auto lg:py-8">
+        <div class="flex">
+            <div class="grow">
+                <a href="#" class="flex items-center mb-5 text-2xl font-semibold text-gray-900">
+                    <img src="/logo.png" class="h-6 mr-3 sm:h-9" alt="GraphMe Logo" />
+                    GraphMe    
+                </a>
+                <span class="block text-sm text-gray-500">
+                    © {year} GraphMe. All rights reserved.
+                </span>
+            </div>
+            <div class="grid gap-16 grid-cols-3">
+                <div>
+                    <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase">Product</h3>
+                    <ul class="text-gray-500">
+                        <li class="mb-4">
+                            <a href="/" class="hover:underline">Features</a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="/pricing" class="hover:underline">Pricing</a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="/docs" class="hover:underline">Docs</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase">Contact</h3>
+                    <ul class="text-gray-500">
+                        <li class="mb-4">
+                            <a href="https://github.com/graphme-app" class="hover:underline">GitHub</a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="mailto:hello@graphme.app" class="hover:underline">Email</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase">Legal</h3>
+                    <ul class="text-gray-500">
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">Privacy Policy</a>
+                        </li>
+                        <li class="mb-4">
+                            <a href="#" class="hover:underline">Terms</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
