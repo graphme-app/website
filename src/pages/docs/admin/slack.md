@@ -1,6 +1,7 @@
 ---
 layout: /src/layouts/DocsLayout.astro
 title: Slack application
+position: 2
 ---
 
 # Manage Slack application
@@ -10,7 +11,7 @@ In order to follow those instructions, you will need the permission to add an Sl
 
 ## Install the application
 
-The Slack application can be installed from the [Connections](https://console.graphme.app/connections) tab in the console.
+The Slack application can be installed from the [Slack application](https://console.graphme.app/slack) tab.
 If it is not installed, you should see a large "Add to Slack" button:
 
 ![Install app](/images/install-app.png)
@@ -26,7 +27,7 @@ After confirming, you will be redirected back to the console, and the Slack app 
 Re-installing the application is harmless, but is usually not needed.
 The only cases where it should be attempted is when instructed by support, or if new permissions are required.
 
-The Slack application can be re-installed from the [Connections](https://console.graphme.app/connections) tab in the console.
+The Slack application can be re-installed from the [Slack application](https://console.graphme.app/slack) tab.
 If it is already installed, you should see a large "Re-install app" button:
 
 ![Re-install app](/images/reinstall-app.png)

@@ -1,5 +1,5 @@
 ---
 layout: /src/layouts/DocsLayout.astro
-title: Using saved queries
-position: 3
+title: Graph options
+position: 4
 ---

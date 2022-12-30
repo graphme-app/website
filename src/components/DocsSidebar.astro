@@ -2,21 +2,10 @@
 import fs from 'node:fs/promises';
 
 const pathname = Astro.url.pathname;
-
-async function readMeta(basePath) {
-    if (!basePath) {
-        return {};
-    }
-    try {
-        return JSON.parse(await fs.readFile(`${basePath}/_meta.json`));
-    } catch (err) {
-        return {};
-    }
-}
-
 const links = [];
 
 const pages = await Astro.glob('/src/pages/docs/*.{md,mdx}');
+pages.sort((a, b) => (a.frontmatter.position < b.frontmatter.position) ? -1 : 1);
 pages.forEach(page => {
     links.push({
         "label": page.frontmatter.title,
@@ -24,17 +13,6 @@ pages.forEach(page => {
         "active": pathname == page.url,
     });
 });
-
-function sortChildren(children, meta) {
-    if (Object.keys(meta).length == 0) {
-        return Object.values(children);
-    }
-    const sorted = [];
-    for (const [key, value] of Object.entries(meta)) {
-        sorted.push(children[key]);
-    }
-    return sorted;
-}
 
 const allPages = await Astro.glob('/src/pages/docs/**/*.{md,mdx}');
 const sections = [
@@ -45,20 +23,16 @@ const sections = [
 for (const section of sections.values()) {
     const url = `/docs/${section.path}`;
     const pages = allPages.filter(page => page.url.startsWith(url));
-    const children = Object.fromEntries(pages.map(page => [
-        page.url.slice(page.url.lastIndexOf('/') + 1),
-        {
-            "label": page.frontmatter.title,
-            "url": page.url,
-            "active": pathname == page.url
-        }
-    ]));
-    const basePath = (pages.length > 0) ? pages[0].file.slice(0, pages[0].file.lastIndexOf('/')) : null;
-    const meta = await readMeta(basePath);
+    pages.sort((a, b) => (a.frontmatter.position < b.frontmatter.position) ? -1 : 1);
+    const children = pages.map(page => ({
+        "label": page.frontmatter.title,
+        "url": page.url,
+        "active": pathname == page.url
+    }));
     links.push({
         "label": section.label,
         "active": pathname.startsWith(url),
-        "children": sortChildren(children, meta),
+        "children": Object.values(children),
     });
 }
 ---
