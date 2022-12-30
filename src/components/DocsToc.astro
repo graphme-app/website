@@ -1,14 +1,16 @@
 ---
 const { headings } = Astro.props;
+// Only display level 2 and 3 headings. Level 1 is the main title.
+const items = headings.filter(heading => heading.depth > 1 && heading.depth <= 3);
 ---
 <aside aria-label="Table of contents">
     <div class="sticky top-0 pt-4">
         <div class="overflow-y-auto py-4 px-2 border-l border-gray-200 w-60">
             <ul class="space-y-1">
-                {headings.filter(heading => heading.depth > 1).map(heading => (
+                {items.map(item => (
                     <li>
-                        <a href={'#' + heading.slug} class="flex items-center py-1 px-3 text-sm font-normal text-gray-900 hover:text-orange-700">
-                            {heading.text}
+                        <a href={'#' + item.slug} class:list={["flex", "items-center", "py-1", {"px-3": item.depth == 2, "px-8": item.depth == 3}, "text-sm", "text-gray-900", "hover:text-orange-700"]}>
+                            {item.text}
                         </a>
                     </li>
                 ))}
