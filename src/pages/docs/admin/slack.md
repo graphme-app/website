@@ -70,17 +70,17 @@ Please make sure to have an adequate internal communication to your users, as th
 
 GraphMe's Slack app asks for the minimal set of permissions required to make it behave correctly:
 
-* *View messages that directly mention the bot:*
+* **View messages that directly mention the bot:**
   We can read the content of messages were our bot user is mentioned.
   We cannot read any other messages.
   This is needed in order to enable users to interact with the not.
-* *Upload files:*
+* **Upload files:**
   Upload graphs as PNG files to channels.
   This is needed to deliver the main feature of GraphMe.
   Please note that files uploaded this way count against your [storage quota in Slack](https://slack.com/help/articles/360035940353-File-storage-in-Slack).
-* *Send messages:*
+* **Send messages:**
   This is not currently used, but we anticipate that GraphMe could send messages (and not only files) in a near future.
-* *Join public channels in a workspace:*
+* **Join public channels in a workspace:**
   We can join any public channel in a workspace (not private channels or private messages).
   This is a technical workaround needed to upload messages to a channel.
   This does not allow us to read messages in the channel (unless mentioned).

@@ -11,7 +11,7 @@ They allow to write a query in the time series database's native query language 
 
 ## Command syntax
 
-To generate a graph from Slack, the command follows the template:
+To generate a graph from Slack, the command looks like:
 
 ```
 @dot graph me <start>[..<end>] +<integration> [+<option> [...]] <query>
@@ -25,7 +25,7 @@ Where:
 * `+<option>` is an option to customize the rendering of the graph.
 * `<query>` is a query in the integration's native query language.
 
-For example, here is a complete command for a Prometheus backend:
+For example, here is a complete command for a Prometheus query:
 
 ```
 @dot graph me -12h +prometheus +title=HTTP_requests
