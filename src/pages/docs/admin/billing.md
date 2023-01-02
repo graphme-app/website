@@ -6,7 +6,7 @@ position: 3
 
 # Manage billing and plan
 
-This page details how to manage your billing information and your subscription.
+This page explains how to manage your billing information and your subscription.
 
 ## Subscribe to a paid plan
 

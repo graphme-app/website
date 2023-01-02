@@ -130,6 +130,11 @@ Like in Atlas, two colors (Xanthin and Yellow) were excluded because users found
 
 ![Graph with palette=reds](/images/graphs/palette-reds.png)
 
+## Transparency
+
+Transparent lines or areas is enabled with the `alpha` option, which takes a value between 0 (transparent) and 1 (solid).
+While it can be used as a standalone option, it is most commonly used in combination with other options such as `style=area`.
+
 ## Axis bounds
 
 The lower and upper bounds for the y-axis can be set explicitly using the `lower` and `upper` option.
@@ -218,8 +223,3 @@ Another value sorts the legends according the a specific field of their statisti
 ```
 
 ![Graph with sort and order](/images/graphs/sort-and-order.png)
-
-## Transparency
-
-Transparent lines or areas is enabled with the `alpha` option, which takes a value between 0 (transparent) and 1 (solid).
-While it can be used as a standalone option, it is most commonly used in combination with other options such as `style=area`.
