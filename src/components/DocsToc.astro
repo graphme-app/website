@@ -9,7 +9,7 @@ const items = headings.filter(heading => heading.depth > 1 && heading.depth <= 3
             <ul class="space-y-1">
                 {items.map(item => (
                     <li>
-                        <a href={'#' + item.slug} class:list={["flex", "items-center", "py-1", {"px-3": item.depth == 2, "px-8": item.depth == 3}, "text-sm", "text-gray-900", "hover:text-orange-700"]}>
+                        <a href={'#' + item.slug} class:list={["flex", "items-center", "py-1", {"px-3": item.depth == 2, "px-8": item.depth == 3}, "text-sm", "text-gray-900", "hover:text-indigo-700"]}>
                             {item.text}
                         </a>
                     </li>
