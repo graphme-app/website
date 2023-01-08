@@ -13,6 +13,19 @@ Here is an example of such as graph:
 
 The remaining of this page details the key features of GraphMe.
 
+## Reusable queries
+
+A common pain point for engineers is to write correct queries against a time series database.
+It is not uncommon for companies to have multiple documents scattered around the place with such queries.
+GraphMe solves this problem by providing a source of truth for queries.
+It allows to reuse common queries under the form of saved graphs.
+Saved graphs support parameters, to support variations of a given query, e.g., to target a different datacenter or environment.
+
+## Customizable graphs
+
+GraphMe proposes [a rich set of options](docs/user/graph-options) to generate graphs, allowing users to customize them very precisely.
+For example, it is possible to choose the color palette, to change labels, or to anonymize data.
+
 ## Multiple time series databases
 
 GraphMe is not tied to a single time series database, but instead integrates with several such technologies.
@@ -20,22 +33,4 @@ Each time series database provides its own querying language and API, but they v
 GraphMe fills this gap by allowing to generate graphs in a similar manner.
 It even allows to connect several time series databases to the same account.
 
-If GraphMe does not support your time series database of choice, please [reach out to us](/support).
-
-## Customizable graphs
-
-GraphMe proposes a rich API to generate graphs, allowing users to customize them very precisely.
-For example, it is possible to choose the color palette, to change labels, or to anonymize data.
-
-## Reusable queries
-
-Whatever the time series database being used, a common pain point for engineers is to write correct queries.
-It is not uncommon for companies to have multiple documents scattered around the place with such queries.
-GraphMe solves this problem by providing a source of truth for queries.
-It allows to reuse common queries under the form of saved graphs.
-Saved graphs support parameters, to support variations of a given query, e.g., to target a different datacenter or environment.
-
-## Collaborative
-
-Because GraphMe is tightly integrated with Slack, it naturally encourages collaboration around graphs.
-It becomes possible to insert a graph directly inside a thread, and discuss the insights it provides.
+If GraphMe does not support your time series database of choice, please [reach out to us](mailto:hello@graphme.app).

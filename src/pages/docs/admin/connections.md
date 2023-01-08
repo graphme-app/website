@@ -43,4 +43,6 @@ Some fields contain secret values (such as passwords or API keys).
 For security reasons, they are never displayed back to users when editing an existing connection.
 If you are editing a connection and leave the field for a secret value empty, the value currently stored in the database will be reused.
 
-Moreover, secret values are encrypted in our database.
+## Security
+
+All parameters that you provide when configuring a connection are encrypted in our database (secret and non-secret values alike).

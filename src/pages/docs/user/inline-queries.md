@@ -1,92 +1,71 @@
 ---
 layout: /src/layouts/DocsLayout.astro
-title: Using inline queries
-position: 2
+title: Using saved graphs
+position: 3
 ---
 
-# Inline queries from Slack
+# Saved graphs from Slack
 
-Inline queries are the fastest way to get started with using GraphMe.
-They allow to write a query in the time series database's native query language and execute it from Slack.
+While [inline graphs](inline-graphs) are a great way to get started, they can be quite tedious to type, especially when the query is somewhat complex.
+One of the motivations behind GraphMe is to provide a source of truth for queries against time series databases.
+This is implemented as saved graphs, which are reusable queries associated with an alias.
 
-## Command syntax
+## Saving a graph
 
-To generate a graph from Slack, the command looks like:
+To create a saved graph from Slack, the command looks like:
 
 ```
-@dot graph me <start>[..<end>] +<integration> [+<option> [...]] <query>
+@dot graph save <alias> as <query>
+```
+
+Where:
+
+* `<alias>` is the identifier of the saved graph that will be used to refer to it.
+* `<query>` is any set of plus-options followed by a native query.
+
+The query is specified using the same syntax as for [inline graphs](inline-graphs), except that the start and end time are not to be specified - they will be specified when executing the query.
+The exact same set of options can otherwise be used, and an integration must be explicitly specified.
+
+For example, here is a complete command to create an alias for a Prometheus query:
+
+```
+@dot save http_requests as +prometheus +title=HTTP_requests
+sum(increase(http_server_duration_ms_count{deployment_environment="test"}[15m]))
+```
+
+If the saved graph does not exist, it will be created.
+If the saved graph already exists, its definition will be overriden.
+
+## Executing a saved graph
+
+To create a saved graph from Slack, the command looks like:
+
+```
+@dot graph me <start>[..<end>] <alias>
 ```
 
 Where:
 
 * `<start>` is the start time of the period to consider.
 * `<end>` is the end time of the period to consider.
-* `+<integration>` is the name of the integration to use, e.g., `+prometheus`.
-* `+<option>` is an option to customize the rendering of the graph.
-* `<query>` is a query in the integration's native query language.
+* `<alias>` is the identifier of a previously saved graph.
 
-For example, here is a complete command for a Prometheus query:
+Start and end time are specified using the same syntax as for [inline graphs](inline-graphs).
+While possible, it is discouraged to specify any plus-options when executing saved graphs.
+They are usually ignored, but the exact behaviour is unspecified at this time.
+
+## Deleting a saved graph
+
+To delete a saved graph from Slack, the command looks like:
 
 ```
-@dot graph me -12h +prometheus +title=HTTP_requests
-sum(increase(http_server_duration_ms_count{deployment_environment="test"}[15m]))
+@dot graph forget <alias>
 ```
 
-Which would generate a graph that looks like:
+Where `<alias>` is the identifier of a previously saved graph.
 
-![Graph: HTTP requests](/images/graphs/http-requests.png)
+For example, here is a complete command to delete the graph created above:
 
-The next sections of this page detail the syntax of the various parameters of this command.
-
-## Time parameters
-
-The start and end time of the period to consider in the query are specified using the same syntax.
-If only the start time is specified, the period ends at the current time:
-If both are specified, they are delimited by a double dot ("..").
-
-Times can be specified using an absolute timestamp with one of the following [formats](https://pubs.opengroup.org/onlinepubs/009695399/functions/strftime.html):
-
-| Format            | Example             | Description                    |
-|-------------------|---------------------|--------------------------------|
-| %Y-%m-%d          | 2022-12-31          | Date. Time is 00:00:00 in UTC. |
-| %Y-%m-%dT%H:%M    | 2022-12-31T10:31    | Date, hour and minutes, in UTC. Seconds are 00. |
-| %Y-%m-%dT%H:%M:%S | 2022-12-31T10:31:17 | Date, hour, minutes and seconds, in UTC. |
-| &lt;timestamp&gt; | 1672482677          | Unix timestamp in seconds, in UTC. |
-
-
-Times can also be specified as a period relative to the current time:
-
-| Format                         | Example | Description        |
-|--------------------------------|---------|--------------------|
-| -&lt;n&gt;s, -&lt;n&gt;seconds | -5s     | Number of seconds. |
-| -&lt;n&gt;m, -&lt;n&gt;months  | -5m     | Number of minutes. |
-| -&lt;n&gt;h, -&lt;n&gt;hours   | -1h     | Number of hours. |
-| -&lt;n&gt;d, -&lt;n&gt;days    | -2d     | Number of days. |
-| -&lt;n&gt;w, -&lt;n&gt;weeks   | -1w     | Number of weeks. |
-| -&lt;n&gt;y, -&lt;n&gt;years   | -1y     | Number of years. |
-
-## Plus-options
-
-Graphs can be customized using a sheer number of options, all specified using the `+key=value` syntax.
-Values cannot contain any space character, since spaces are used as a delimited between consecutive options.
-If you need to use a space (e.g., for a title or a label), you can replace them by underscores instead.
-
-A particular option is the name of the integration to use.
-This must refer to an integration for which [a connection has been configured](../admin/connections).
-The integration is then referred to using a lowercase name without any associated value, e.g., `+prometheus` or `+datadog`.
-
-:::assert
-The name of the integration to use must always be present when using inline queries, even if only a single connection is configured.
-When unspecified, it indicates a [saved query](saved-queries).
-:::
-
-Other options are mostly used to configure the appearance of the rendered graph, e.g., to change its title or axis.
-To learn more about available options, please refer to the [reference of all options](graph-options).
-
-## Native query
-
-This type of interaction is called "inline query" because the query is directly written in Slack.
-There is not limitation in what can be done here, you can leverage the entire language of the time series database being queried.
-The query will be forwarded as-is to the database.
-
-If you prefer to avoid typing entire queries directly in Slack, you might find [saved queries](saved-queries) very useful!
+```
+@dot save http_requests
+```

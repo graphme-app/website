@@ -36,8 +36,8 @@ Every plan comes with limits around three dimensions:
 
 * **Connections:** A limit in the number of connections that can be configured.
 Once the threshold is reached, it will not be possible to configure any new connections without first removing another one.
-* **Saved queries:** A limit in the number of saved queries that can be created.
-Once the threshold is reached, it will not be possible anymore to create any new saved queries without first removing another one.
+* **Saved graphs:** A limit in the number of saved graphs that can be created.
+Once the threshold is reached, it will not be possible anymore to create any new saved graphs without first removing another one.
 * **Users:** A limit in the number of users that can interact with GraphMe.
 This does not apply to the console, but applies to all Slack commands (except `help`).
 Once the threshold is reached for a billing cycle, it will not be possible for any new user to interact with GraphMe.
