@@ -10,7 +10,8 @@ module.exports = {
 		extend: {
 			colors: {
 				aubergine: "rgb(63,14,64)",
-				'primary': {
+				// Generated from https://uicolors.app/create
+				primary: {
 					'50': '#ebf1ff',
 					'100': '#dbe5ff',
 					'200': '#beceff',

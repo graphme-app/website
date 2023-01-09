@@ -1,8 +1,12 @@
 ---
 import fs from 'node:fs/promises';
 
-const pathname = Astro.url.pathname;
+const pathname = trimTrailingSlash(Astro.url.pathname);
 const links = [];
+
+function trimTrailingSlash(str) {
+    return str.endsWith('/') ? str.slice(0, -1) : str;
+}
 
 const pages = await Astro.glob('/src/pages/docs/*.{md,mdx}');
 pages.sort((a, b) => (a.frontmatter.position < b.frontmatter.position) ? -1 : 1);
