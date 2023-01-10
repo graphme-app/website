@@ -4,9 +4,9 @@ title: Using inline graphs
 position: 2
 ---
 
-# Inline queries from Slack
+# Inline graphs from Slack
 
-Inline queries are the fastest way to get started with using GraphMe.
+Inline graphs are the fastest way to get started with using GraphMe.
 They allow to write a query in the time series database's native query language and execute it from Slack.
 
 ## Command syntax
@@ -76,7 +76,7 @@ This must refer to an integration for which [a connection has been configured](.
 The integration is then referred to using a lowercase name without any associated value, e.g., `+prometheus` or `+datadog`.
 
 :::assert
-The name of the integration to use must always be present when using inline queries, even if only a single connection is configured.
+The name of the integration to use must always be present when using inline graphs, even if only a single connection is configured.
 When unspecified, it indicates a [saved graph](saved-graphs).
 :::
 
@@ -85,7 +85,7 @@ To learn more about available options, please refer to the [reference of all opt
 
 ## Native query
 
-This type of interaction is called "inline query" because the query is directly written in Slack.
+This type of interaction is called *inline* because the query is directly written in Slack.
 There is not limitation in what can be done here, you can leverage the entire language of the time series database being queried.
 The query will be forwarded as-is to the database.
 
