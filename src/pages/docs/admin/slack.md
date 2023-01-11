@@ -80,7 +80,3 @@ GraphMe's Slack app asks for the minimal set of permissions required to make it 
   Please note that files uploaded this way count against your [storage quota in Slack](https://slack.com/help/articles/360035940353-File-storage-in-Slack).
 * **Send messages:**
   This is not currently used, but we anticipate that GraphMe could send messages (and not only files) in a near future.
-* **Join public channels in a workspace:**
-  We can join any public channel in a workspace (not private channels or private messages).
-  This is a technical workaround needed to upload messages to a channel.
-  This does not allow us to read messages in the channel (unless mentioned).
