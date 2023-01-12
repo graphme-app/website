@@ -4,7 +4,7 @@ title: Using saved graphs
 position: 3
 ---
 
-# Saved graphs from Slack
+# Saved graphs in Slack
 
 While [inline graphs](inline-graphs) are a great way to get started, they can be quite tedious to type, especially when the query is somewhat complex.
 One of the motivations behind GraphMe is to provide a source of truth for queries against time series databases.
@@ -12,7 +12,7 @@ This is implemented as saved graphs, which are reusable queries associated with 
 
 ## Saving a graph
 
-To create a saved graph from Slack, the command looks like:
+To create a saved graph in Slack, the command looks like:
 
 ```
 @dot graph save <alias> as <query>
@@ -39,7 +39,7 @@ If the saved graph already exists, its definition will be overriden.
 
 ## Executing a saved graph
 
-To create a saved graph from Slack, the command looks like:
+To execute a saved graph in Slack, the command looks like:
 
 ```
 @dot graph me <start>[..<end>] <alias>
@@ -88,7 +88,7 @@ This is especially useful if the parameter name is directly followed by a charac
 
 ## Deleting a saved graph
 
-To delete a saved graph from Slack, the command looks like:
+To delete a saved graph in Slack, the command looks like:
 
 ```
 @dot graph forget <alias>

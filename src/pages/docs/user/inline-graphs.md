@@ -4,14 +4,14 @@ title: Using inline graphs
 position: 2
 ---
 
-# Inline graphs from Slack
+# Inline graphs in Slack
 
 Inline graphs are the fastest way to get started with using GraphMe.
-They allow to write a query in the time series database's native query language and execute it from Slack.
+They allow to write a query in the time series database's native query language and execute it in Slack.
 
 ## Command syntax
 
-To generate a graph from Slack, the command looks like:
+To generate a graph in Slack, the command looks like:
 
 ```
 @dot graph me <start>[..<end>] +<integration> [+<option> [...]] <query>

@@ -17,7 +17,7 @@ Please reach out to us to provide us feedback if you want more capabilities to b
 
 ## Meet GraphMe's bot
 
-To interact with GraphMe from Slack, you need to mention our bot, whose name is `@dot`.
+To interact with GraphMe in Slack, you need to mention our bot, whose name is `@dot`.
 Dot is both a short form for Dorothy, and also a reference to the dot (".") that is sometimes used as a prefix for Slack-based commands interpreted by bots.
 
 :::note
@@ -34,7 +34,7 @@ Instead, it is only notified of messages where it is explicitly mentioned.
 
 ## Anatomy of a command
 
-Therefore, interactions with GraphMe from Slack start with a mention of our bot, followed by a command, e.g.:
+Therefore, interactions with GraphMe in Slack start with a mention of our bot, followed by a command, e.g.:
 
 ```
 @dot help
