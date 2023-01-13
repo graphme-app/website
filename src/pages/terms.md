@@ -31,23 +31,30 @@ Your account may be terminated at any time if:
 
 In such a situation, we will notify you by email or Slack.
 
-## Security and privacy
-
-We commit to honestly taking all required measures to protect your data stored in our service.
-Sensitive data, such as tokens and credentials, will be stored encrypted in our database.
-We process your personal information in accordance with [our privacy policy](/privacy).
-
 ## Liability
 
 To the maximum extent permitted by law, the service is provided on an "as is" and "as available" basis.
+We make no warranties, may it be expressed or implied, therefore negates all other warranties. 
 We are not responsible for any delays, delivery failures, service unavailability, or any loss or damage resulting from your usage of our service.
 You understand that you are using the service at your own discretion and risk.
+
+## Limitations
+
+We will not be hold accountable for any damages that will arise with the use or inability to use our service, even if an authorized representative has been notified, orally or written, of the possibility of such damage.
+
+## Privacy
+
+We process your personal information in accordance with [our privacy policy](/privacy).
 
 ## Changes to our terms of service
 
 We may change those terms of service from time to time.
 In case of a significant change, we will notify you by email or Slack.
 We recommend anyway that you periodically review those terms of service.
+
+## Governing law
+
+Any claim related to our service shall be governed by the French law.
 
 ## Contact us
 
