@@ -1,0 +1,14 @@
+---
+import Layout from './Layout.astro'
+
+const { frontmatter } = Astro.props;
+---
+<Layout title={frontmatter.title}>
+    <div class="border-gray-200 shadow-inner border-t">
+        <div class="max-w-screen-lg mx-auto flex">
+            <article class="prose max-w-none p-6">
+                <slot />
+            </article>
+        </div>
+    </div>
+</Layout>
