@@ -2,7 +2,7 @@
 const questions = await Astro.glob('../pages/_faq/*.md');
 ---
 <h2 class="mb-6 text-3xl font-extrabold tracking-tight text-center text-gray-900 lg:mb-8 lg:text-3xl">Frequently asked questions</h2>
-<div class="max-w-screen-md mx-auto">
+<div class="max-w-screen-sm lg:max-w-screen-md mx-auto">
     <div id="accordion-flush" data-accordion="collapse" data-active-classes="bg-white text-gray-900" data-inactive-classes="text-gray-500">
         {questions.map((question, idx) => (
             <h3 id={`accordion-flush-heading-${idx}`}>
