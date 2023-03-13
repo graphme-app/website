@@ -1,7 +1,7 @@
 ---
 layout: /src/layouts/DocsLayout.astro
 title: Billing and plan
-position: 3
+position: 22
 ---
 
 # Manage billing and plan

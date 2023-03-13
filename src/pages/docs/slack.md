@@ -1,10 +1,10 @@
 ---
 layout: /src/layouts/DocsLayout.astro
-title: Slack application
-position: 2
+title: Manage the application
+position: 21
 ---
 
-# Manage Slack application
+# Manage the application for Slack
 
 This page explains how to install, uninstall or change settings related to the Slack integration.
 In order to follow those instructions, you will need the permission to add an Slack app to your workspace.

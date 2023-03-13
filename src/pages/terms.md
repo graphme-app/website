@@ -6,7 +6,7 @@ title: Terms of service
 # Terms of service
 
 :::note
-Last updated: January 2022
+Last updated: March 2023
 :::
 
 ## Use of the service

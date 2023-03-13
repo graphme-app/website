@@ -1,10 +1,10 @@
 ---
 layout: /src/layouts/DocsLayout.astro
-title: Connections
-position: 1
+title: Connect to Grafana
+position: 10
 ---
 
-# Manage connections
+# Connect GraphMe to Grafana
 
 This page explains what connections are and how to configure them.
 

@@ -4,35 +4,26 @@ import Faq from '../components/Faq.astro';
 
 const plans = [
     {
-        "name": "Free",
-        "description": "Relevant for individuals, or to evaluate the product at a small scale.",
-        "price": 0,
-        "features": [
-            "5 users",
-            "1 connection",
-            "50 saved graphs",
-            "Fair usage",
-        ],
-    },
-    {
         "name": "Team",
-        "description": "Best to collaborate with multiple users inside a team.",
-        "price": 50,
+        "price": 25,
         "features": [
-            "20 users",
-            "1 connection",
-            "Unlimited saved graphs",
+            "25 users",
             "Unlimited usage",
         ],
     },
     {
         "name": "Company",
-        "description": "Best for a large scale use inside a larger team or company.",
-        "price": 250,
+        "price": 50,
         "features": [
-            "150 users",
-            "5 connections",
-            "Unlimited saved graphs",
+            "50 users",
+            "Unlimited usage",
+        ],
+    },
+    {
+        "name": "Enterprise",
+        "price": 100,
+        "features": [
+            "100 users",
             "Unlimited usage",
         ],
     }
@@ -48,14 +39,13 @@ const plans = [
                     Designed for teams of all sizes
                 </h2>
                 <p class="mb-5 font-light text-gray-500 sm:text-xl">
-                    Start with the Free plan to evaluate the product without any time limit, and then jump onto the paid plan that works for your team size.
+                    A clear and simple pricing, based on the number of allocated seats.
                 </p>
             </div>
             <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
                 {plans.map(plan => (
-                    <div class="flex flex-col max-w-lg p-6 mx-auto text-center text-gray-900 bg-white border border-gray-100 rounded-lg shadow xl:p-8">
-                        <h3 class="mb-4 text-2xl font-semibold">{plan.name}</h3>
-                        <p class="font-light text-gray-500 sm:text-lg">{plan.description}</p>
+                    <div class="flex flex-col max-w-lg p-6 w-full mx-auto text-center text-gray-900 bg-white border border-gray-100 rounded-lg shadow xl:p-8">
+                        <h3 class="mb-4 text-2xl font-semibold">{plan.name} Plan</h3>
                         <div class="flex items-baseline justify-center my-8">
                             <span class="mr-2 text-5xl font-extrabold">${plan.price}</span>
                             <span class="text-gray-500">/month</span>
@@ -68,7 +58,7 @@ const plans = [
                                 </li>
                             ))}
                         </ul>
-                        <a href="https://console.graphme.app/signup"
+                        <a href="https://console.graphme.app/slack/install"
                            class="text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                         >
                             Get started

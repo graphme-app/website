@@ -6,7 +6,7 @@ title: Privacy policy
 # Privacy policy
 
 :::note
-Last updated: January 2022
+Last updated: March 2023
 :::
 
 This privacy policy explains which data we collect about you and how we use it.
@@ -14,26 +14,33 @@ It also explains your rights about this data and how to exercise them.
 By using our service, you accept this privacy policy.
 If you are in disagreement with it, please do not use our service and contact us to get your data deleted.
 
+## Preamble
+
+When designing GraphMe, we took privacy very seriously from the beginning.
+No company wants to risk compromising information by sharing it with a third party service that is spying on it.
+That is why we collect only the very minimal amount of information needed to keep the product running, and nothing more.
+You are not the product, GraphMe is!
+
 ## Information you provide to us
 
 **Account information:**
-When you sign up or log in, we get access to your first name, last name and email address.
+When you install the app, we have access to your identity (but not your email address).
 We also get access to information about the Slack workspace you are a member of (team name, enterprise name if it is an enterprise grid install).
-When you sign up or log in, you are redirected to Slack where you have to give your consent for us to access this data.
+When you sign up, you are redirected to Slack where you have to give your consent for us to access this data.
 
 **Content submitted through our service:**
 When using our service, you voluntarily store content into it.
-It can be via our Web console or via the Slack application.
+It can be via our Web console or via the application for Slack.
 This includes connections and graphs.
 
 **Information from Slack:**
-Our service listens to some Slack events.
-This includes reactions to app mentions, interactivity that result from it, and Slack app lifecycle.
-When you install the Slack app, you are redirected to Slack where you have to give your consent for us to access this data.
+Our service listens to some events from Slack.
+This includes reactions to commands, interactivity that result from it, and lifecycle of the application for Slack.
+When you install the application for Slack, you are redirected to Slack where you have to give your consent for us to access this data.
 
-**Information from integrations:**
-When a query is executed via a connection you configured, we get access to the time series as returned by your times series database.
-We have access to data stored there, including any personal information that might be stored there.
+**Information from Grafana:**
+When a request is sent to the instance of Grafana you configured, we access information such as configured dashboards, their panels, and rendered graphs.
+While we have access to data stored in Grafana, we do not process any personal information that might be stored there.
 
 **Payment information:**
 We collect billing information, such as a billing contact, when you subscribe to a paid plan.
@@ -41,16 +48,19 @@ You also provide payment information, such as card details, which are processed 
 
 ## Information we collect automatically
 
+**Graphs:**
+For every graph request sent to our app, we store rendered graphs permanently in S3.
+
 **Usage statistics:**
-We keep track of every graph request that was sent to our service.
-It includes the user ID and channel ID, but does not include the actual query being executed or its outcome.
+We keep track of every command that was sent to our service.
+It includes metadata such as the user ID, channel ID and command issued.
 
 **Website statistics:**
 Our websites contain a privacy-preserving tracking code.
 We collect data about which pages are visited, referrals, entry and exit pages, time spent, device type, browser type and country.
 It does not rely on any cookies to collect data, meaning individual users are not tracked.
 
-**Access logs and metrics:**
+**Logs and metrics:**
 We collect technical data about every interaction with our service.
 This may include your operating system, device type, browser type, IP address, time of access, loading time, HTTP status code and crash reports.
 
@@ -79,6 +89,15 @@ Fathom is our privacy-preserving website analytics provider.
 They have access to website statistics.
 Please refer to [Fathom's Privacy Policy](https://usefathom.com/privacy) to learn more about how they process data.
 
+**Cloudflare:**
+Cloudflare is our CDN (Content Delivery Network) provider.
+Every request to our app goes through Cloudflare first.
+They have access to access logs.
+
+Cloudflare is also our blob storage provider.
+They have access to rendered graphs.
+Please refer to [Cloudflare's Privacy Policy](https://www.cloudflare.com/en-gb/privacypolicy/) to learn more about how they process data.
+
 **Slack:**
 Slack is the platform with which you interact with GraphMe.
 They have access to your interactions with our service.
@@ -94,10 +113,10 @@ Sentry is our error tracking system.
 They have access to errors that may happen when you use our service.
 Please refer to [Stripe's Privacy Policy](https://sentry.io/privacy/) to learn more about how they process data.
 
-**Axiom:**
-Sentry is our logging system.
-They have access to access logs.
-Please refer to [Axiom's Privacy Policy](https://www.axiom.co/privacy) to learn more about how they process data.
+**Logtail:**
+Logtail is our logging system.
+They have access to various logs such as access logs and system logs.
+Please refer to [Logtail's Privacy Policy](https://betterstack.com/privacy) to learn more about how they process data.
 
 **Grafana Cloud:**
 Grafana Cloud is our observability system.

@@ -1,10 +1,10 @@
 ---
 layout: /src/layouts/DocsLayout.astro
-title: Slack integration
-position: 1
+title: Share dashboards
+position: 11
 ---
 
-# Slack integration
+# Share Grafana dashboards in Slack
 
 All interactions with GraphMe from a user perspective happen through Slack.
 The goal is to avoid context switching between different tools.
