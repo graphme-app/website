@@ -31,10 +31,6 @@ Clicking on the button will trigger the same flow as for a regular installation.
 
 ## Uninstall the application
 
-:::warn
-Uninstalling the Slack app will prevent your users to interact with GraphMe.
-:::
-
 To uninstall the application, first access the application's home in Slack (e.g., by searching for "GraphMe" in the search bar).
 Then go to the "About" tab, and click on the "Configuration" button.
 You will end up on a page allowing you to configure the installation of the application for Slack.

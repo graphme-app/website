@@ -48,6 +48,11 @@ By default, every new team is configured with a demo instance of Grafana: https:
 This allows new users to get started quickly.
 This demo instance is not maintained by GraphMe, and might be subject to some limitations (such as rate limiting).
 
+## Grafana Renderer API
+
+GraphMe relies heavily the [image renderer plugin](https://grafana.com/docs/grafana/latest/setup-grafana/image-rendering/) to actually render graphs.
+This plugin must be installed in your Grafana instance in order for GraphMe to deliver graphs successfully.
+
 ## Network connectivity
 
 Your instance of Grafana should be publicly addressable in order for GraphMe to communicate with it.
