@@ -6,10 +6,11 @@ position: 1
 
 # Get started
 
-Only two steps are required to start using GraphMe:
+After [installing the application for Slack](https://console.graphme.app/slack/install) in your workspace, you are ready to issue your first slash command:
 
-1. [Install the application for Slack](https://console.graphme.app/slack/install) in your workspace.
-2. Issue your first slash command: `/graph me grafana-play-home:4`
+```
+/graph me grafana-play-home:4
+```
 
 After a few seconds, this should give you the following response:
 
