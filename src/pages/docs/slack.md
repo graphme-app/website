@@ -6,32 +6,27 @@ position: 21
 
 # Manage the application for Slack
 
-This page explains how to install, uninstall or change settings related to the Slack integration.
-In order to follow those instructions, you will need the permission to add an Slack app to your workspace.
+This page explains how to install, uninstall or change settings related to our applicatin for Slack.
+In order to follow those instructions, you will need the permission to add an application to your workspace.
 
 ## Install the application
 
-The Slack application can be installed from the [Slack application](https://console.graphme.app/slack) tab.
-If it is not installed, you should see a large "Add to Slack" button:
+The Slack application can be installed from our "Add to Slack" button:
 
-![Install app](/images/install-app.png)
+[![Install app](/images/btn-add-to-slack.png)](https://console.graphme.app/slack/install)
 
 Clicking on the button will redirect you to a screen that will ask you to accept some permissions required to make the application to work.
 If you need to better understand how we use those permissions, please refer to [the dedicated section](#permissions).
 After confirming, you will be redirected back to the console, and the Slack app should be available!
 
-[Slack's own documentation](https://slack.com/help/articles/202035138-Add-apps-to-your-Slack-workspace) contains more information about adding apps to a workspace.
+[Slack's documentation](https://slack.com/help/articles/202035138-Add-apps-to-your-Slack-workspace) contains more information about adding apps to a workspace.
 
 ## Re-install the application
 
 Re-installing the application is harmless, but is usually not needed.
-The only cases where it should be attempted is when instructed by support, or if new permissions are required.
+The only cases where it should be attempted is when instructed to do so by the application itself of by the support.
 
-The Slack application can be re-installed from the [Slack application](https://console.graphme.app/slack) tab.
-If it is already installed, you should see a large "Re-install app" button:
-
-![Re-install app](/images/reinstall-app.png)
-
+The Slack application can be re-installed by using the same "Add to Slack" button than above.
 Clicking on the button will trigger the same flow as for a regular installation.
 
 ## Uninstall the application
@@ -40,43 +35,33 @@ Clicking on the button will trigger the same flow as for a regular installation.
 Uninstalling the Slack app will prevent your users to interact with GraphMe.
 :::
 
-GraphMe's console does not provide a direct way to uninstall the application, but this can be done from Slack.
-First, go to the application's home in Slack (e.g., by search for "dot" in the search bar).
+To uninstall the application, first access the application's home in Slack (e.g., by searching for "GraphMe" in the search bar).
 Then go to the "About" tab, and click on the "Configuration" button.
-You will end up on a page allowing you to configure the installation of the Slack app.
+You will end up on a page allowing you to configure the installation of the application for Slack.
 
-Lower in the page, there is an option to remove the app from your workspace:
+Lower in the page, there is an option to remove the application from your workspace:
 
 ![Remove app](/images/remove-app.png)
 
 ## Change the bot's name
 
-:::deter
-Renaming the bot will break how your users interact with GraphMe.
-:::
-
-By default, the bot is named @dot, but this can be changed.
-First, go to the application's home in Slack (e.g., by search for "dot" in the search bar).
+By default, the bot is named @graphme, but this can be changed.
+To rename the bot, first access the application's home in Slack (e.g., by searching for "GraphMe" in the search bar).
 Then go to the "About" tab, and click on the "Configuration" button.
-You will end up on a page allowing you to configure the installation of the Slack app.
+You will end up on a page allowing you to configure the installation of the application for Slack.
 
-Lower in the page, there is an option to rename the bot user associated with the app:
+Lower in the page, there is an option to rename the bot user associated with the application:
 
 ![Bot user](/images/bot-user.png)
 
-Please make sure to have an adequate internal communication to your users, as they will need to change all their @mention to the new bot's name in order to continue using GraphMe.
-
 ## Permissions
 
-GraphMe's Slack app asks for the minimal set of permissions required to make it behave correctly:
+GraphMe's application for Slack asks for the minimal set of permissions required to make it behave correctly:
 
-* **View messages that directly mention the bot:**
-  We can read the content of messages were our bot user is mentioned.
-  We cannot read any other messages.
-  This is needed in order to enable users to interact with the not.
-* **Upload files:**
-  Upload graphs as PNG files to channels.
-  This is needed to deliver the main feature of GraphMe.
-  Please note that files uploaded this way count against your [storage quota in Slack](https://slack.com/help/articles/360035940353-File-storage-in-Slack).
-* **Send messages:**
-  This is not currently used, but we anticipate that GraphMe could send messages (and not only files) in a near future.
+* **View information about your identity:**
+  This is the minimal permission needed when installing an application.
+  This does *not* give us access to your email address.
+* **Add shortcuts and/or slash commands that people can use:**
+  The primary way of interacting with GraphMe is via slash commands.
+  This permission is needed in order to install the `/graph` command inside your workspace.
+  This also allows GraphMe from being notified whenever somebody uses a slash command, and to react to it.

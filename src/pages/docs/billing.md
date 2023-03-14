@@ -6,29 +6,45 @@ position: 22
 
 # Manage billing and plan
 
-This page explains how to manage your billing information and your subscription.
+This page explains how to manage your billing information and subscription.
 
 ## Subscribe to a paid plan
 
-By default, all new accounts come with a Free plan.
-This plan has no limit in time, but comes with usage limits.
-Those limits can be overcome by subscribing to a paid plan.
-From the [Billing and plan](https://console.graphme.app/billing) tab, you can select a more appropriate plan:
+By default, all new accounts come with a free plan.
+To collaborate with your team, you will need to subscribe to a paid plan.
+You can obtain the URL to the subscription page by using the following command from Slack:
 
-![Billing and plan](/images/billing.png)
+```
+/graph billing
+```
 
-You will be redirected to a page hosted by [Stripe](https://stripe.com), our payment provider, where you will need to fill your payment information.
-Once validated, your plan will be provisioned in a few minutes, and be usable straight away.
+Which gives you the following response:
 
-In the same manner, you can switch from one paid plan to another.
-When doing so, you will be billed at the pro-rata of the number of days in both the previous billing cycke, and the new billing cycle.
+![Configure billing](/images/graph-billing-subscribe.png)
 
-## Cancel a subscription
+After clicking on the link, you will end up on a page that looks like the following:
 
-At any time, you can switch back to the Free plan, from the [Billing and plan](https://console.graphme.app/billing) tab.
-You will be redirected to a page hosted by [Stripe](https://stripe.com), our payment provider, where you will be asked to confirm the cancelation of the subscription.
-When doing so, you will be billed one last time at the pro-rate of the number of days in the current billing cycle.
-You may need to do some adjustments in order to fit the new limits of your plan.
+![Select a plan](/images/console-subscribe.png)
+
+After selecting the plan you are interested in, you will be redirected to a page hosted by [Stripe](https://stripe.com), our payment provider, where you will need to fill your payment information.
+Once validated, your plan will be provisioned in a few minutes.
+You will not be charged until the end of your free trial, and can cancel at any time during this trial period.
+
+## Manage your subscription
+
+Once subscribed to a paid plan, you can switch to another plan, cancel your plan, or update your billing information at any time.
+You can obtain the URL to the customer portal by using the following command from Slack:
+
+```
+/graph billing
+```
+
+Which gives you the following response:
+
+![Configure billing](/images/graph-billing-portal.png)
+
+
+After clicking on the link, you will end up on a page hosted by [Stripe](https://stripe.com), our payment provider, that allows you to manage your subscription.
 
 ## Limits
 
@@ -44,4 +60,4 @@ Once the threshold is reached for a billing cycle, it will not be possible for a
 
 ## Need help? 
 
-Should you encounter any issue with billing or you plan's limits, please [reach out to support](mailto:hello@graphme.app).
+Should you encounter any issue with billing, please [reach out to us](mailto:hello@graphme.app).

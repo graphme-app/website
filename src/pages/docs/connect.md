@@ -6,43 +6,57 @@ position: 10
 
 # Connect GraphMe to Grafana
 
-This page explains what connections are and how to configure them.
+This page explains how to configure GraphMe to interact with your instance of Grafana.
 
-## Connections
+## Open the console
 
-Connections are used to teach GraphMe how to communicate with an time series database that you own.
-A connection usually contains metadata about the backend (such as a URL), and credentials (such as an API key).
-What a connection is made of depends on the precise time series database.
+After installing the application for Slack, you are redirected to the console where you can configure the connection to Grafana.
+You can also obtain the URL to this console by using the following command from Slack:
 
+```
+/graph connect
+```
 
-## Configuration
+Which gives you the following response:
 
-Connections are configured from the [Connections](https://console.graphme.app) tab:
+![Configure connection](/images/graph-connect.png)
 
-![Configure connections](/images/connections.png)
-
-Connections that are configured have a checkmark before their name, and are presented first.
-The number of connections you can configure with your account depends on [your billing plan](billing).
-
-:::assert
-Your favorite time series database is not listed as a supported integration?
-Please [reach out to us](mailto:hello@graphme.app) and let us know!
+:::note
+Please note that one way or another, links to the console are only valid for 15 minutes.
 :::
 
-To configure a new connection, or edit an existing one, click on the name of the time series database you want to configure, and fill the form.
-Here is an example for Prometheus:
+## Configure the connection
 
-![Configure Prometheus connection](/images/connections-prometheus.png)
+The console to configure the connection to Grafana looks like the following:
 
-Provided information is validated upon save by issuing a fake query against the time series database, in order to limit the risk of having a unusable connection.
-However, please make sure to keep your connection synchronized with any credentials change, e.g., due to a password rotation policy.
+![Configure connection](/images/console-connect.png)
 
-### Secret values
+There are three fields to fill in order to configure the connection to Grafana:
 
-Some fields contain secret values (such as passwords or API keys).
-For security reasons, they are never displayed back to users when editing an existing connection.
-If you are editing a connection and leave the field for a secret value empty, the value currently stored in the database will be reused.
+| Field   | Required | Description |
+|---------|----------|-------------|
+| Host    | Yes      | Base URL of the Grafana host to connect to.
+| API key | No       | An [API key](https://grafana.com/docs/grafana/latest/administration/api-keys/) or [service account token](https://grafana.com/docs/grafana/latest/administration/service-accounts/). Only dashboards accessible by this key will be available via GraphMe. While this parameter can be omitted when connecting to a public instance, it is in practice always specified when connecting to your own private instance of Grafana |
+| Org ID  | No       | An [organization identifier](https://grafana.com/docs/grafana/latest/administration/organization-management/). Only dashboards accessible to this organization will be available via GraphMe. This is only needed if your instance of Grafana uses multiple organizations. By default, the organization identifier of the first organization is assumed. |
+
+For security reasons, the API key is never displayed in the form, even if one is actually used.
+Consequently, when editing a connection that requires an API key, you must provide the API key every time.
+
+## Demo instance
+
+By default, every new team is configured with a demo instance of Grafana: https://play.grafana.org
+This allows new users to get started quickly.
+This demo instance is not maintained by GraphMe, and might be subject to some limitations (such as rate limiting).
+
+## Network connectivity
+
+Your instance of Grafana should be publicly addressable in order for GraphMe to communicate with it.
+This is often the case when you use an instance of Grafana managed as a service, such as [Grafana Cloud](https://grafana.com/products/cloud/).
+
+:::warn
+Please [reach out to us](mailto:hello@graphme.app) if your instance is hosted in your private network and you wish to use GraphMe.
+:::
 
 ## Security
 
-All parameters that you provide when configuring a connection are encrypted in our database (secret and non-secret values alike).
+The API key is stored encrypted in our database.
