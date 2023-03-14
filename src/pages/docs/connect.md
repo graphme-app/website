@@ -17,7 +17,7 @@ You can also obtain the URL to this console by using the following command from 
 /graph connect
 ```
 
-Which gives you the following response:
+Which would give the following response:
 
 ![Configure connection](/images/graph-connect.png)
 

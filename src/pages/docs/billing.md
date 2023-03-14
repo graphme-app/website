@@ -18,7 +18,7 @@ You can obtain the URL to the subscription page by using the following command f
 /graph billing
 ```
 
-Which gives you the following response:
+Which would give the following response:
 
 ![Configure billing](/images/graph-billing-subscribe.png)
 
@@ -39,7 +39,7 @@ You can obtain the URL to the customer portal by using the following command fro
 /graph billing
 ```
 
-Which gives you the following response:
+Which would give the following response:
 
 ![Configure billing](/images/graph-billing-portal.png)
 

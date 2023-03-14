@@ -6,39 +6,68 @@ position: 11
 
 # Share Grafana dashboards in Slack
 
-All interactions with GraphMe from a user perspective happen through Slack.
-The goal is to avoid context switching between different tools.
-[GraphMe's console](https://console.graphme.app) is currently only used for administration operations.
+This page explains the different ways to share Grafana dashboards from Slack.
 
-:::note
-In the future, we might allow some user-oriented actions to happen in the console.
-Please reach out to us to provide us feedback if you want more capabilities to be built inside the console.
-:::
+## Share dashboards and panels
 
-## Meet GraphMe's bot
+![Share a dashboard](/images/graph-me.png)
 
-To interact with GraphMe in Slack, you need to mention our bot, whose name is `@dot`.
-Dot is both a short form for Dorothy, and also a reference to the dot (".") that is sometimes used as a prefix for Slack-based commands interpreted by bots.
+## Create and reuse saved graphs
 
-:::note
-We could have proposed a slash command (e.g., `/graph`) to interact with GraphMe, but unfortunately slash commands come with limitations, e.g., their inability to be invoked from threads.
-That is how we ended up with our very own bot, `@dot`!
-:::
-
-## Invite the bot
-
-To interact with our bot, you first need to invite it to the channels from which you want to use GraphMe.
-It is usually done using Slack's `/invite` command.
-But don't worry, our bot will not be eavesdropping on you!
-Instead, it is only notified of messages where it is explicitly mentioned.
-
-## Anatomy of a command
-
-Therefore, interactions with GraphMe in Slack start with a mention of our bot, followed by a command, e.g.:
+Graphs that are often queried can be saved under an alias for an easier access.
+We call them **saved graphs**.
+The latest graph that has been shared in the channel by the current user can be saved with the following command:
 
 ```
-@dot help
+/graph save as <alias>
 ```
 
-The bot must be mentioned at the very beginning of the message, other it will not work.
-Please continue reading the next pages of this documentation to learn more about available commands.
+For example:
+
+```
+/graph save as cpu
+```
+
+Which would give the following response:
+
+![Save graph](/images/graph-save.png)
+
+It can then be invoked with the following command:
+
+```
+/graph me cpu
+```
+
+All the usual options of the `/graph me` command can still be used.
+If an option was part of the saved graph, it will be overridden.
+For example:
+
+```
+/graph me cpu -7d -2d host=app1
+```
+
+By default, a saved graph cannot be overridden, unless you use the `save!` command:
+
+```
+/graph save! as cpu
+```
+
+If a saved graph is not useful anymore, it can be deleted with the following command:
+
+```
+/graph forget <alias>
+```
+
+For example:
+
+```
+/graph forget cpu
+```
+
+Which would give the following response:
+
+![Forget graph](/images/graph-forget.png)
+
+## Search for dashboards and graphs
+
+![Search dashboards](/images/graph-search.png)
