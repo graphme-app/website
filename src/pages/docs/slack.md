@@ -13,7 +13,7 @@ In order to follow those instructions, you will need the permission to add an ap
 
 The Slack application can be installed from our "Add to Slack" button:
 
-[![Install app](/images/btn-add-to-slack.png)](https://console.graphme.app/slack/install)
+[![Install app](/images/btn-add-to-slack-small.png)](https://console.graphme.app/slack/install)
 
 Clicking on the button will redirect you to a screen that will ask you to accept some permissions required to make the application to work.
 If you need to better understand how we use those permissions, please refer to [the dedicated section](#permissions).
@@ -54,7 +54,7 @@ Lower in the page, there is an option to rename the bot user associated with the
 
 ![Bot user](/images/bot-user.png)
 
-## Permissions
+## Required permissions
 
 GraphMe's application for Slack asks for the minimal set of permissions required to make it behave correctly:
 

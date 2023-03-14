@@ -43,7 +43,6 @@ Which gives you the following response:
 
 ![Configure billing](/images/graph-billing-portal.png)
 
-
 After clicking on the link, you will end up on a page hosted by [Stripe](https://stripe.com), our payment provider, that allows you to manage your subscription.
 
 ## Limits

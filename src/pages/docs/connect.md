@@ -21,11 +21,11 @@ Which gives you the following response:
 
 ![Configure connection](/images/graph-connect.png)
 
-:::note
-Please note that one way or another, links to the console are only valid for 15 minutes.
-:::
-
 ## Configure the connection
+
+:::note
+Please note that links to the console are only valid for 15 minutes.
+:::
 
 The console to configure the connection to Grafana looks like the following:
 
@@ -56,7 +56,3 @@ This is often the case when you use an instance of Grafana managed as a service,
 :::warn
 Please [reach out to us](mailto:hello@graphme.app) if your instance is hosted in your private network and you wish to use GraphMe.
 :::
-
-## Security
-
-The API key is stored encrypted in our database.
