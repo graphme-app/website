@@ -74,7 +74,7 @@ Time period quantifiers (e.g., "hours", "days") can also be specified in singula
 Here is an example of a complex query involving parameters and time range:
 
 ```
-/graph me influxdb-server-monitoring:4 host=server1 summarize=1h -1d -12h
+/graph me influxdb-server-monitoring:3 host=server1 summarize=1h -1d -12h
 ```
 
 ## Create and reuse saved graphs
