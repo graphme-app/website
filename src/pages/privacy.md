@@ -21,7 +21,7 @@ No company wants to risk compromising information by sharing it with a third par
 That is why we collect only the very minimal amount of information needed to keep the product running, and nothing more.
 You are not the product, GraphMe is!
 
-## Data we collect
+## Which data we collect
 
 **Account information:**
 When you install the application, we get access to your identity and the identity of the workspace the application has been installed in.
@@ -121,6 +121,10 @@ Please refer to [Grafana's Privacy Policy](https://grafana.com/legal/privacy-pol
 
 ## Your rights
 
+:::assert
+Rights detailed in this section apply to all users of our service, whether or not they are located in the European Union.
+:::
+
 We follow the GDPR framework, which gives you the following rights.
 
 ### The right to be informed
@@ -164,4 +168,4 @@ We recommend anyway that you periodically review this privacy policy.
 
 ## Contact us
 
-If you have questions or concerns, or wish to exercise your data rights, please contact us at hello@graphme.app
+If you have questions or concerns, or wish to exercise your data rights, including data deletion, please contact us at hello@graphme.app
