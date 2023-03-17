@@ -11,13 +11,13 @@ In order to follow those instructions, you will need the permission to add an ap
 
 ## Install the application
 
-The Slack application can be installed from our "Add to Slack" button:
+Our application for Slack can be installed from our "Add to Slack" button:
 
 [![Install app](/images/btn-add-to-slack-small.png)](https://console.graphme.app/slack/install)
 
 Clicking on the button will redirect you to a screen that will ask you to accept some permissions required to make the application to work.
 If you need to better understand how we use those permissions, please refer to [the dedicated section](#permissions).
-After confirming, you will be redirected back to the console, and the Slack app should be available!
+After confirming, you will be redirected back to the console, and the application should be available in your workspace!
 
 [Slack's documentation](https://slack.com/help/articles/202035138-Add-apps-to-your-Slack-workspace) contains more information about adding apps to a workspace.
 
@@ -26,7 +26,7 @@ After confirming, you will be redirected back to the console, and the Slack app 
 Re-installing the application is harmless, but is usually not needed.
 The only cases where it should be attempted is when instructed to do so by the application itself of by the support.
 
-The Slack application can be re-installed by using the same "Add to Slack" button than above.
+Our application for Slack can be re-installed by using the same "Add to Slack" button than above.
 Clicking on the button will trigger the same flow as for a regular installation.
 
 ## Uninstall the application
