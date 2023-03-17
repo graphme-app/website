@@ -21,50 +21,46 @@ No company wants to risk compromising information by sharing it with a third par
 That is why we collect only the very minimal amount of information needed to keep the product running, and nothing more.
 You are not the product, GraphMe is!
 
-## Information you provide to us
+## Data we collect
 
 **Account information:**
-When you install the app, we have access to your identity (but not your email address).
-We also get access to information about the Slack workspace you are a member of (team name, enterprise name if it is an enterprise grid install).
-When you sign up, you are redirected to Slack where you have to give your consent for us to access this data.
+When you install the application, we get access to your identity and the identity of the workspace the application has been installed in.
+When you subscribe to a plan, we get access to billing information (name, email address, billing address).
+Account information is stored until your account is closed.
+Billing information may be stored undefinitely when necessary for regulatory or compliance purposes.
 
 **Content submitted through our service:**
-When using our service, you voluntarily store content into it.
+When using our service, you voluntarily store content into it, such as connection information, queries and graphs.
 It can be via our Web console or via the application for Slack.
-This includes connections and graphs.
+Interactions from users may also result in some content being generated, such as graphs.
+We keep track of every command that was sent to our service.
+It includes metadata such as the user ID, channel ID and command issued.
+Content submitted through our service is stored until you voluntarily choose to delete it (when applicable), or until your account is closed.
 
 **Information from Slack:**
 Our service listens to some events from Slack.
 This includes reactions to commands, interactivity that result from it, and lifecycle of the application for Slack.
 When you install the application for Slack, you are redirected to Slack where you have to give your consent for us to access this data.
+The token associated with your installation of GraphMe is stored until you uninstall the application, or until your account is closed.
+Other information obtained from Slack is processed in-memory and not persisted.
 
 **Information from Grafana:**
-When a request is sent to the instance of Grafana you configured, we access information such as configured dashboards, their panels, and rendered graphs.
+When a request is sent to the instance of Grafana you configured, we access information such as configured dashboards and their panels.
 While we have access to data stored in Grafana, we do not process any personal information that might be stored there.
-
-**Payment information:**
-We collect billing information, such as a billing contact, when you subscribe to a paid plan.
-You also provide payment information, such as card details, which are processed by our payment provider.
-
-## Information we collect automatically
-
-**Graphs:**
-For every graph request sent to our app, we store rendered graphs permanently in S3.
-
-**Usage statistics:**
-We keep track of every command that was sent to our service.
-It includes metadata such as the user ID, channel ID and command issued.
+Information obtained from Grafana is processed in-memory and not persisted.
 
 **Website statistics:**
 Our websites contain a privacy-preserving tracking code.
 We collect data about which pages are visited, referrals, entry and exit pages, time spent, device type, browser type and country.
 It does not rely on any cookies to collect data, meaning individual users are not tracked.
+Website statistics are anonymous and may be stored undefinitely.
 
 **Logs and metrics:**
 We collect technical data about every interaction with our service.
 This may include your operating system, device type, browser type, IP address, time of access, loading time, HTTP status code and crash reports.
+Logs and metrics may be stored up to one year.
 
-## How we use collected information
+## How we use collected data
 
 **To provide the service:**
 First and foremost, we use aforementioned collected data to provide you with a service.
