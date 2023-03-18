@@ -121,10 +121,6 @@ Please refer to [Grafana's Privacy Policy](https://grafana.com/legal/privacy-pol
 
 ## Your rights
 
-:::assert
-Rights detailed in this section apply to all users of our service, whether or not they are located in the European Union.
-:::
-
 We follow the GDPR framework, which gives you the following rights.
 
 ### The right to be informed
@@ -159,6 +155,10 @@ You have the right to export your personal data in a machine readable format, an
 
 You have the right to object the processing of your personal data.
 In particular, you have the right to object your personal data being used for marketing purposes.
+
+## Request data deletion
+
+Regardless of whether you are subject to the GDPR, you can always request your data to be deleted by reaching out to us at hello@graphme.app
 
 ## Changes to our privacy policy
 
